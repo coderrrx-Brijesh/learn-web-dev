@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- USING GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Danfo&display=swap" rel="stylesheet">
+    <title>SELECTORS</title>
+    <link rel="stylesheet" href="Drawables/external.css">
+    <style>
+        /* 1.ELEMENT SELETOR AND GROUP SELECTOR*/
+        p,h1{
+            background-color: rgba(128, 128, 128, 0.646);
+        }
+        /* 2.ID SELECTOR */
+        #id_1{
+            background-color: rgba(60, 205, 50, 0.342);
+            /* BOX MODELS */
+            border-style: solid;
+            border-width: 10px;
+            border-top: 10px;
+            border-color: aqua;
+            border-radius: 4px;
+            border-top-left-radius: 20px;
+            width: 400px;
+            padding: 10px 20px 25px 12px;
+            margin: 100px;
+        }
+        /* 3.CLASS SELECTOR */
+        .para_class{
+            font-weight: 45;
+            /* COLOR SELECTIONS */
+       /*1.USING RGB*/     background-color: rgb(100, 150, 350);
+       /*2.USING RGBA-->A=TRANSPARENCY*/ background-color: rgba(100, 150, 350,0.5);
+       /*3.USING HSL->HUE SATURATION LIGHT*/ color: hsl(280, 70%, 50%);
+        }
+        P.para_class{
+            text-align: center;
+            font-family: "Danfo", serif;
+            display: inline-block;/*used to impart preoperties of block elements (custom width and height) in inline elements*/
+        }
+        /* UNIVERSAL SELECTOR */
+        *{
+            border: solid;
+            border-color: rgb(139, 224, 189);
+        }
+    </style>
+</head>
+<body>
+    <h1>FOUR WAYS TO SELECT ELEMENTS FOR CSS</h1>
+    <h2 class="para_class">LET'S Go</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum, vitae.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum, vitae.</p>
+    <p class="para_class">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum, vitae.</p>
+    <p class="para_class">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum, vitae.</p>
+    <p id="id_1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum, vitae.</p>
+</body>
+</html>

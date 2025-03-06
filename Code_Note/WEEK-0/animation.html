@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation_Basics</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100vw;
+            height: 100vh;
+            background-color: rgb(139, 241, 185);
+            border: 50px solid black;
+            border-radius: 10px;
+            border-inline-end-color: rgb(106, 176, 211);
+        }
+        .box{
+            width: 300px;
+            height: 100px;
+            background-color: rgb(228, 241, 158);
+            border: 5px solid rgb(152, 57, 200);
+            border-radius: 100px;
+            margin: 10px;
+            position: relative;
+            text-align: center;
+            font-family:fantasy;
+        }
+        #box_1{
+            animation-name: right_movement;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+            animation-fill-mode: backwards;
+            /* animation: 5s linear infinite alternate none running right_movement; */
+        }
+        @keyframes right_movement{
+            from{
+                top: 0;
+                left: 0;
+            }
+            to{
+                top: 0px;
+                left: 1060px;
+            }
+        }
+        .circle{
+            text-align:center;
+            width: 100px;
+            height: 100px;
+            background-color: rgb(236, 127, 18);
+            border: 10px solid yellow;
+            border-radius: 50px;
+            position: relative;
+            top: 30%;
+            left: 40%;
+            animation: circle_animation 10s ease-in-out 0s infinite alternate backwards;
+        }
+        @keyframes circle_animation{
+            0%{
+                top: 1%;
+                left: 5%;
+            }
+            30%{
+                top: 5%;
+                left: 90%;
+            }
+            60%{
+                top: 70%;
+                left: 10%;
+            }
+            100%{
+                top: 75%;
+                left: 90%;
+            }
+        }
+        #box_2{
+            animation-name: left_movement;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+            animation-fill-mode: backwards;
+            /* animation: 5s linear infinite alternate none running left_movement; */
+        }
+        @keyframes left_movement{
+            from{
+                top: 310px;
+                left: 0;
+            }
+            to{
+                top: 310px;
+                left: 1060px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box_1">BOX_1</div>
+        <div class="circle" id="circle_1"></div>
+        <div class="box" id="box_2">BOX_2</div>
+    </div>
+</body>
+</html>

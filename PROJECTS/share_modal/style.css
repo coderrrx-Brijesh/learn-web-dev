@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    background-color: black;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+}
+.circles{
+    border-radius:50% ;
+    width: 13em;
+    height: 13em;
+}
+.circle_1{
+    box-shadow: rgb(249, 92, 68) 0 0 50px;
+    background: linear-gradient(-25deg, #d84869, #f46641);
+    
+}
+.circle_2{
+    box-shadow: rgb(125, 69, 199) 0 0 50px;
+    background: linear-gradient(-25deg, #5648d8, #8641f4);
+}
+h2,h4{
+    color: white;
+}
+.buttons{
+    color: white;
+    display: flex;
+    gap: 5px;
+}
+.btn{
+    border: solid white 2px;
+    border-radius: 3px;
+}

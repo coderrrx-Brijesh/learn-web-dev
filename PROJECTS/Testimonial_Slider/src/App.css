@@ -1,0 +1,110 @@
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(24, 21, 21, 0);
+}
+.testimonial-box{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    font-size: 3em;
+    display: inline;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 0px;
+    margin-top: 10%;
+}
+
+.line{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 0px;
+    border: 3px solid blueviolet;
+    background-color: blueviolet;
+    margin-bottom: 20px;
+    margin-top: -10px;
+
+}
+
+.content-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    height: 70%;
+    background-color: aliceblue;
+    margin-top: 15%;
+    box-shadow: 10px 10px 20px black;
+    gap: 30px;
+    margin-bottom: 10%;
+}
+img{
+    position: absolute;
+    top: -65px;
+    border-radius: 50%;
+    width: 20%;
+    border-top:10px solid blueviolet ;
+    border-right:10px solid blueviolet ;
+    box-shadow: 10px -20px 20px black;
+}
+.detail-box{
+    margin-top:10% ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.name{
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+    font-size: larger;
+    font-weight: bold;
+}
+.job-title{
+    color: rgba(137, 43, 226, 0.362);
+    font-weight: 500;
+}
+.quote{
+    color: blueviolet;
+}
+.job-desc{
+    width: 60%;
+}
+.switch{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.switch-button{
+    color: blueviolet;
+}
+.surprise-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35%;
+    height: 40px;
+    background-color: blueviolet;
+    padding: 2%;
+    border-radius: 10px;
+    font-size: medium;
+    color: aliceblue;
+    font-weight: 500;
+    padding-left: 7%;
+    padding-right: 7%;
+}
+

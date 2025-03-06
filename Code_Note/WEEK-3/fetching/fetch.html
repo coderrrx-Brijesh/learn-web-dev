@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch</title>
+    <link rel="stylesheet" href="fetch.css">
+</head>
+<body>
+    <script>
+        // Get data from a server(.then())
+        // function get_data(){
+        //     fetch("https://fakerapi.it/api/v1/persons")
+        //     .then(function(response){
+        //         response.json()
+        //         .then(function(data){
+        //             console.log(data)
+        //         })
+        //     })
+        // }
+        
+        // Get data from a server(await)
+        async function get_data(){
+            const response=await fetch("https://fakerapi.it/api/v1/persons");
+            const json_data= await response.json()
+            console.log(json_data)
+            document.getElementById("user_data").innerHTML=JSON.stringify(json_data)
+        }
+    </script>
+</body>
+    <div id="user_data"></div>
+    <button onclick="get_data()">Get Data</button>
+</html>
