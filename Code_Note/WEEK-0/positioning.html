@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning</title>
+    <style>
+        #img_1 {
+            width: 500px;
+            position: relative;
+            /*it is relative to current window and maintain gap*/
+            border: solid;
+            border-width: 10px;
+            top: 100px;
+        }
+
+        #img_2 {
+            width: 500px;
+            position: absolute;
+            /*it is relative to closest ansector and do not maintain gap, can overlap*/
+            border: solid;
+            border-width: 10px;
+            top: 100px;
+        }
+
+        #img_3 {
+            width: 500px;
+            position: fixed;
+            /*fixed in entire web page*/
+            border: solid;
+            border-width: 10px;
+            top: 100px;
+        }
+
+        #img_4 {
+            width: 100px;
+            height: 100px;
+            position: sticky;
+            /*fixed in parent division*/
+            border: solid;
+            border-width: 10px;
+            top: 100px;
+        }
+
+        #img_5 {
+            /*Static poistioning by default*/
+            width: 500px;
+            border: solid;
+            border-width: 10px;
+            top: 100px;
+        }
+
+        #img_6 {/*float positioning*/
+            width: 100px;
+            float: left;
+        }
+        #img_7 {
+            width: 100px;
+            float: right;
+        }
+        .container{
+            border:solid;
+            width: 700px;
+            height: 500px;
+            overflow: scroll;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;border:solid ;border-width: 10vh;">Positioning</h1>
+    <img src="Drawables/landing.png" alt="" id="img_1">
+    <img src="Drawables/image_1.png" alt="" id="img_2">
+    <img src="Drawables/image_10.png" alt="" id="img_3">
+    <div style="width: 600px; height: 1000px; border: solid; right: 410p;">
+        <img src="Drawables/image_11.png" alt="" id="img_4">
+        <h3 style="text-align: center; color: aqua;font-size: 5rem;">Hello coderrrx</h3>
+    </div>
+    <img src="Drawables/image_12.png" alt="" id="img_5">
+    <div class="container">
+        <img src="Drawables/image_12.png" alt="" id="img_6">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, aut, quam voluptate sint nobis eos
+            perspiciatis soluta neque molestias doloremque et rem! Minus rem ut error omnis, eos saepe nisi repellat
+            possimus ipsum unde animi ducimus reprehenderit. Sint, maiores, rerum facilis nostrum voluptas, ut eligendi
+            ducimus doloremque saepe repellat eaque. Rerum nulla voluptas amet, magnam doloremque ab aperiam modi
+            inventore minima rem ipsum ex cum asperiores natus voluptatibus illo, qui, praesentium ipsa sapiente
+            provident magni! Veniam, eum sunt aliquid molestiae animi magnam accusantium enim doloribus tempore iure
+            laboriosam nulla sint earum commodi reiciendis illo quidem itaque molestias quam. Minus, nam laudantium!
+            Placeat quis accusamus pariatur explicabo quibusdam! Quos illum soluta, odit excepturi incidunt labore
+            reiciendis distinctio laboriosam sequi laborum pariatur, porro amet asperiores qui quae possimus obcaecati
+            quisquam vel in, ab perferendis. Quod quis temporibus laudantium? Accusantium beatae architecto ipsa iusto
+            eaque eligendi molestiae fuga culpa! Vero ut corrupti assumenda nisi! Vero, unde. Minus sapiente accusamus,
+            dolorum ipsum cumque amet debitis sed accusantium natus ad omnis eum ipsa ipsam illo veniam deserunt velit
+            sint quidem quo praesentium veritatis nesciunt exercitationem obcaecati blanditiis. Beatae voluptatum
+            debitis explicabo ipsum obcaecati. Voluptatibus quae, quos odio odit molestias delectus nesciunt modi
+            ratione impedit? Maxime recusandae neque deserunt? Ratione harum, veritatis vitae ad veniam porro commodi
+            voluptates quasi, dolorem sunt, eligendi architecto laudantium! Nobis, vero. Distinctio beatae repudiandae
+            blanditiis! Itaque impedit numquam, dolore vel quaerat natus quia magni sunt aliquid nostrum perferendis
+            reiciendis sint modi eos veritatis ut. Culpa sit quia odit reiciendis eaque alias enim, consequatur
+            consectetur eos laudantium ut earum minima. Illo molestias corporis nemo omnis ducimus quisquam at impedit
+            enim reprehenderit nesciunt tenetur ea tempora officiis, explicabo dicta delectus labore. Quo laboriosam
+            alias veritatis placeat, nemo corporis consequatur laborum aliquam minima fuga? Dolores deserunt nisi
+            eveniet possimus corporis dolore esse, quod laborum, autem ipsa pariatur labore soluta fuga asperiores
+            recusandae repellendus necessitatibus excepturi obcaecati tenetur ea ipsam laudantium minus cumque.
+            Doloremque accusantium dolorum minima qui impedit, reiciendis molestias ducimus expedita veniam, placeat at
+            hic nulla. Ea impedit qui eius eaque excepturi suscipit officiis dolore ipsam soluta beatae illo
+            repellendus, quam, repellat a nihil neque in itaque voluptatum iste sed consequuntur officia sint? Aperiam,
+            deserunt dolor quas, consequatur non asperiores earum minus a unde ullam error iusto sequi perspiciatis
+            eligendi inventore. Non mollitia ullam cumque voluptatum fuga dignissimos, quasi qui dolorum placeat
+            accusantium, quo suscipit eveniet quam id laborum asperiores corrupti, inventore deleniti aliquid delectus
+            iste veniam esse. Fugiat, delectus consequuntur sed fugit dignissimos doloremque magnam quia mollitia itaque
+            laudantium repellendus placeat obcaecati doloribus aspernatur aliquam nesciunt velit aliquid vitae soluta
+            consequatur voluptates vero culpa pariatur? At sunt rem, fuga neque voluptatem distinctio sed vitae libero
+            fugit, nam illo autem architecto minima culpa amet. Reprehenderit iusto in ducimus exercitationem illum
+            magnam ad maxime fuga laboriosam nesciunt rerum eos voluptatibus eum tempore nobis, voluptates repudiandae
+            iste est sint ipsa cum autem! Amet sit suscipit quisquam possimus, ipsa sed sequi cumque tenetur. Modi cum
+            accusamus sed fugit error assumenda! Totam ipsam dolorem quia libero? Accusantium.</p>
+        <img src="Drawables/image_12.png" alt="" id="img_7">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, aut, quam voluptate sint nobis eos
+            perspiciatis soluta neque molestias doloremque et rem! Minus rem ut error omnis, eos saepe nisi repellat
+            possimus ipsum unde animi ducimus reprehenderit. Sint, maiores, rerum facilis nostrum voluptas, ut eligendi
+            ducimus doloremque saepe repellat eaque. Rerum nulla voluptas amet, magnam doloremque ab aperiam modi
+            inventore minima rem ipsum ex cum asperiores natus voluptatibus illo, qui, praesentium ipsa sapiente
+            provident magni! Veniam, eum sunt aliquid molestiae animi magnam accusantium enim doloribus tempore iure
+            laboriosam nulla sint earum commodi reiciendis illo quidem itaque molestias quam. Minus, nam laudantium!
+            Placeat quis accusamus pariatur explicabo quibusdam! Quos illum soluta, odit excepturi incidunt labore
+            reiciendis distinctio laboriosam sequi laborum pariatur, porro amet asperiores qui quae possimus obcaecati
+            quisquam vel in, ab perferendis. Quod quis temporibus laudantium? Accusantium beatae architecto ipsa iusto
+            eaque eligendi molestiae fuga culpa! Vero ut corrupti assumenda nisi! Vero, unde. Minus sapiente accusamus,
+            dolorum ipsum cumque amet debitis sed accusantium natus ad omnis eum ipsa ipsam illo veniam deserunt velit
+            sint quidem quo praesentium veritatis nesciunt exercitationem obcaecati blanditiis. Beatae voluptatum
+            debitis explicabo ipsum obcaecati. Voluptatibus quae, quos odio odit molestias delectus nesciunt modi
+            ratione impedit? Maxime recusandae neque deserunt? Ratione harum, veritatis vitae ad veniam porro commodi
+            voluptates quasi, dolorem sunt, eligendi architecto laudantium! Nobis, vero. Distinctio beatae repudiandae
+            blanditiis! Itaque impedit numquam, dolore vel quaerat natus quia magni sunt aliquid nostrum perferendis
+            reiciendis sint modi eos veritatis ut. Culpa sit quia odit reiciendis eaque alias enim, consequatur
+            consectetur eos laudantium ut earum minima. Illo molestias corporis nemo omnis ducimus quisquam at impedit
+            enim reprehenderit nesciunt tenetur ea tempora officiis, explicabo dicta delectus labore. Quo laboriosam
+            alias veritatis placeat, nemo corporis consequatur laborum aliquam minima fuga? Dolores deserunt nisi
+            eveniet possimus corporis dolore esse, quod laborum, autem ipsa pariatur labore soluta fuga asperiores
+            recusandae repellendus necessitatibus excepturi obcaecati tenetur ea ipsam laudantium minus cumque.
+            Doloremque accusantium dolorum minima qui impedit, reiciendis molestias ducimus expedita veniam, placeat at
+            hic nulla. Ea impedit qui eius eaque excepturi suscipit officiis dolore ipsam soluta beatae illo
+            repellendus, quam, repellat a nihil neque in itaque voluptatum iste sed consequuntur officia sint? Aperiam,
+            deserunt dolor quas, consequatur non asperiores earum minus a unde ullam error iusto sequi perspiciatis
+            eligendi inventore. Non mollitia ullam cumque voluptatum fuga dignissimos, quasi qui dolorum placeat
+            accusantium, quo suscipit eveniet quam id laborum asperiores corrupti, inventore deleniti aliquid delectus
+            iste veniam esse. Fugiat, delectus consequuntur sed fugit dignissimos doloremque magnam quia mollitia itaque
+            laudantium repellendus placeat obcaecati doloribus aspernatur aliquam nesciunt velit aliquid vitae soluta
+            consequatur voluptates vero culpa pariatur? At sunt rem, fuga neque voluptatem distinctio sed vitae libero
+            fugit, nam illo autem architecto minima culpa amet. Reprehenderit iusto in ducimus exercitationem illum
+            magnam ad maxime fuga laboriosam nesciunt rerum eos voluptatibus eum tempore nobis, voluptates repudiandae
+            iste est sint ipsa cum autem! Amet sit suscipit quisquam possimus, ipsa sed sequi cumque tenetur. Modi cum
+            accusamus sed fugit error assumenda! Totam ipsam dolorem quia libero? Accusantium.</p>
+    </div>
+</body>
+
+</html>

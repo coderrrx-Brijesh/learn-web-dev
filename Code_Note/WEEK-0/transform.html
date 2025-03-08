@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet">
+    <title>Transform</title>
+    <style>
+            *{
+        align-items: center;
+            }
+        .box_2d{
+            margin: 200px;
+            border: 5px solid black;
+            background-color: rgb(247, 174, 66);
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            transition: all 3s linear 0s;
+        }
+        .box_2d:hover{
+            transform: rotate(360deg);
+            transform: scale(0.5);
+            transform: skew(45deg);
+            transform: translate(100px, 100px);
+        }
+        .box_3d{
+            background-color: bisque;
+            padding: 5rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .item{
+            padding: 2rem;
+            margin: 2rem;
+            border: 5px solid rgb(185, 127, 239);
+            color: rgb(255, 0, 0);
+            background-color: rgb(71, 250, 36);
+            height: 150px;
+            width: 150px;
+            align-content: center;
+        }
+        #rotatex:hover{
+            transform: rotateX(45deg);
+        }
+        #rotatey:hover{
+            transform: rotateY(45deg);
+        }
+        #rotatez:hover{
+            transform: rotateZ(45deg);
+        }
+        #translatex:hover{
+            transform: translateX(100px);
+        }
+        #translatey:hover{
+            transform: translateY(100px);
+        }
+        #translatez:hover{
+            transform:perspective(300px) translateZ(100px);
+        }
+        #scalex:hover{
+            transform: scaleX(1.5);
+        }
+        #scaley:hover{
+            transform: scaleY(1.5);
+        }
+        #scalez:hover{
+            transform:perspective(300px) scaleZ(3) rotatey(45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box_2d" href="Drawables/transfrom.css">
+        <p>Ultimatum Box</p>
+    </div>
+    <div class="box_3d">
+        <div class="item" id="rotatex">Rotate X</div>
+        <div class="item" id="rotatey">Rotate Y</div>
+        <div class="item" id="rotatez">Rotate Z</div>
+        <div class="item" id="translatex">Translate X</div>
+        <div class="item" id="translatey">Translate Y</div>
+        <div class="item" id="translatez">Translate Z</div>
+        <div class="item" id="scalex">Scale X</div>
+        <div class="item" id="scaley">Scale Y</div>
+        <div class="item" id="scalez">Scale Z</div>
+    </div>
+</body>
+</html>

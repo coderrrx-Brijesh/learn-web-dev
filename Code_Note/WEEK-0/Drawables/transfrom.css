@@ -1,0 +1,19 @@
+*{
+    align-items: center;
+}
+.box{
+    margin: 200px;
+    border: 5px solid black;
+    background-color: rgb(247, 174, 66);
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    transition: all 3s linear 0s;
+}
+.box:hover{
+    transform: rotate(360deg);
+    transform: scale(0.5);
+    transform: skew(45deg);
+    transform: translate(100px, 100px);
+}

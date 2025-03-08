@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition_Basics</title>
+    <style>
+        *{
+            border: 50px solid rgb(227, 99, 99);
+        }
+        .box{
+            height: 100px;
+            width: 100px;
+            background-color: rgb(139, 233, 130);
+            border: 5px solid black;
+            transition-property: all;
+            transition-duration: 3s;
+            transition-delay: 1ms;
+            transition-timing-function: ease-in-out;
+            transition:all 4s ease-in;   /*apply_on time timing_fnction delay*/
+        }
+        .box:hover{
+            width: 200px;
+            height: 400px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
