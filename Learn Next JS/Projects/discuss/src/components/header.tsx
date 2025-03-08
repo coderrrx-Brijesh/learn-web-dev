@@ -1,7 +1,8 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { Input } from "./ui/input";
 import { Auth } from "@auth/core";
 import AuthHeader from "./auth-header";
+import SearchInput from "./search-input";
 const HeaderSec = async () => {
 
   return (
@@ -10,11 +11,9 @@ const HeaderSec = async () => {
         <h1 className="text-2xl font-bold">Discuss</h1>
       </div>
       <div className="flex justify-center">
-        <Input
-          type="text"
-          placeholder="Search Posts..."
-          className="w-full max-w-md"
-        />
+        <Suspense>
+          <SearchInput/>
+        </Suspense>
       </div>
       <div className="flex justify-end space-x-2 cursor-pointer">
         <AuthHeader/>

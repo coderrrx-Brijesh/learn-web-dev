@@ -6,7 +6,7 @@ import { revalidatePath } from 'next/cache'
 import {z} from 'zod'
 
 const createCommentSchema = z.object({
-    content: z.string().min(1),
+    content: z.string().min(3),
 })
 
 type createCommentState = {
@@ -16,8 +16,12 @@ type createCommentState = {
     }
 }
 
-export const createComment = async (postId: string, parentid: string, prevState: createCommentState, formData: FormData): Promise<createCommentState> => {
-    const result = createCommentSchema.safeParse(formData)
+export const createComment = async ({postId, parentId} : {postId: string, parentId?: string}, 
+    prevState: createCommentState, formData: FormData): Promise<createCommentState> => {
+        const result = createCommentSchema.safeParse({
+            content: formData.get("content")?.toString(),
+          });
+          
     if(!result.success){
         return {errors: result.error.flatten().fieldErrors}
     }
@@ -32,32 +36,30 @@ export const createComment = async (postId: string, parentid: string, prevState:
         }
     }
 
-    try{
+    try {
+        if (!postId) {
+            return {
+                errors: {
+                    formError: ["Invalid post ID. Please try again."]
+                }
+            };
+        }
+    
         const comment = await prisma.comment.create({
             data: {
                 content: result.data.content,
-                postId:"1",
-                userId: session.user.id,
-                parentId:"2"
-            }
-        })
-    }
-    catch(error){
-        if(error instanceof Error){
-            return {
-                errors: {
-                    formError: [error.message]
-                }
-            }
-        }
-        else {
-            return {
-                errors: {
-                    formError: ["Something went wrong"]
-                }
-            }
-        }
-    }
+                post: { connect: { id: postId } }, // Ensures valid postId
+                user: { connect: { id: session.user.id } },
+                parent: parentId ? { connect: { id: parentId } } : undefined,
+            },
+        });
+    } catch (error) {
+        return {
+            errors: {
+                formError: [error instanceof Error ? error.message : "Something went wrong"],
+            },
+        };
+    }    
     const topic = await prisma.topic.findFirst({
         where: {
             posts:{some:{id:postId}}
