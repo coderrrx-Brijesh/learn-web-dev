@@ -26,4 +26,4 @@ const PostShow : React.FC<PostShowProps> = async ({postId})=> {
     )
 }
 
-export default PostShow
+export default  PostShow
