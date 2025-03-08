@@ -1,0 +1,43 @@
+.App {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(137, 137, 190);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Container {
+  border-radius: 20px;
+  height: 200px;
+  width: 200px;
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.Heading{
+  font-size: 20px;
+  font-weight: bold;
+}
+.Counter_box{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: center
+}
+.Reset_btn{
+  cursor: pointer;
+  border: 2px solid black;
+  background-color: rgb(20, 211, 52);
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.counter{
+  font-size: large;
+  font-weight: bold;
+}
