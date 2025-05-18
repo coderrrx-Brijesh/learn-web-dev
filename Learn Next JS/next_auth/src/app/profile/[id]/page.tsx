@@ -1,14 +1,17 @@
-import { Parkinsans } from 'next/font/google'
-import React from 'react'
+import React, { JSX } from "react";
 
-const ProfilePage = async ({ params }: { params: { id: string } }) => {
-  const { id } = await params // need to await params
-  return (
-    <div>
-      <div>Welcome to Profile of</div>
-      <span className='bg-amber-600 rounded-b-md text-black p-2'>{id}</span>
-    </div>
-  )
+interface ProfilePageProps {
+    params: Promise<{ id: string }>;
+    // optionally, add searchParams if needed:
+    searchParams?: Promise<{ [key: string]: string | string[] | undefined }>;
 }
 
-export default ProfilePage
+export default async function ProfilePage({ params }: ProfilePageProps): Promise<JSX.Element> {
+    const { id } = await params;
+    return (
+        <div>
+            <div>Welcome to Profile of</div>
+            <span className="bg-amber-600 rounded-b-md text-black p-2">{id}</span>
+        </div>
+    );
+}

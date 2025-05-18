@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { useRouter } from "next/navigation"
-import React from "react"
+import React, { useEffect } from "react"
 import axios from "axios"
 import toast from "react-hot-toast"
 
@@ -23,7 +23,7 @@ const LogIn = () => {
       console.log("Login Success", response.data);
       toast.success("Login Success");
       router.push("/profile");}
-    }catch(error:any){
+    }catch(error){
       console.log("Login failed", error);
       toast.error("Login failed");
     }finally{
@@ -31,6 +31,15 @@ const LogIn = () => {
     }
     
   }
+
+  useEffect(()=>{
+    if(user.email.length > 0 && user.password.length > 0){
+      setButtonDisabled(false);
+    }else{
+      setButtonDisabled(true);
+    }
+  },[user])
+
 
   return (
     <div className="flex flex-col h-screen w-full justify-center items-center p-4">
@@ -40,7 +49,7 @@ const LogIn = () => {
         <input type="email" name="email" id="email" className="bg-amber-50 text-black  rounded-b-sm p-1 w-1/4" placeholder="Email" onChange={(e) => setUser({...user, email: e.target.value})} />
         <label htmlFor="password">Password</label>
         <input type="password" name="password" id="password" className="bg-amber-50 text-black rounded-b-sm p-1 w-1/4" placeholder="Password" onChange={(e) => setUser({...user, password: e.target.value})} />
-      <button className="bg-gray-800 p-2 rounded-sm mt-10" onClick={onLogIn}>Log In</button>
+      <button disabled={buttonDisabled} className="bg-gray-800 p-2 rounded-sm mt-10" onClick={onLogIn}>Log In</button>
       </div>
       <Link href={"/signup"}>SignUp Here</Link>
     </div>

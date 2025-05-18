@@ -29,7 +29,10 @@ export async function POST(request: NextRequest) {
         await sendEmail({email,emailType:"VERIFY",userId:savedUser._id});
 
         return NextResponse.json({ message: "User created successfully ",success:true,  user:savedUser }, { status: 201 });
-    } catch (error: any) {
-        return NextResponse.json({ error: error.message }, { status: 500 });
+    } catch (error) {
+        if (error instanceof Error) {
+            return NextResponse.json({ error: error.message }, { status: 500 });
+        }
+        return NextResponse.json({ error: String(error) }, { status: 500 });
     }
 }
